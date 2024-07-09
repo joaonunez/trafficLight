@@ -8,9 +8,9 @@ export function Semaforo() {
     setColor(selectedColor); 
   };
   const handleAlternar=() =>{
-    const colores = ['rojo','amarillo','verde']
-    let randomColor = Math.floor(Math.random()*colores.length)
-    setColor(colores[randomColor])
+    const colores = ['rojo','amarillo','verde'];
+    let randomColor = Math.floor(Math.random()*colores.length);
+    setColor(colores[randomColor]);
   }
   return (
     <>
