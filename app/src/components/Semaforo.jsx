@@ -3,13 +3,15 @@ export function Semaforo() {
   const [color, setColor] = useState(null); 
 
   useEffect(() => {
-    
   },[color]); 
-
   const handleClick = (selectedColor) => {
     setColor(selectedColor); 
   };
-
+  const handleAlternar=() =>{
+    const colores = ['rojo','amarillo','verde']
+    let randomColor = Math.floor(Math.random()*colores.length)
+    setColor(colores[randomColor])
+  }
   return (
     <>
       <div className="cuerpo-semaforo">
@@ -25,6 +27,9 @@ export function Semaforo() {
           className={`verde ${color === "verde" ? "seleccionado" : ""}`}
           onClick={() => handleClick("verde")}
         ></div>
+      </div>
+      <div className="mt-5 m-auto text-center col-1">
+        <button className="btn btn-primary" onClick={handleAlternar}>Alternar Color</button>
       </div>
     </>
   );
